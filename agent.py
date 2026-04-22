@@ -407,19 +407,20 @@ def _send_gmail_message(
     subject: str,
     html_body: str,
     step_name: str = "gmail_send_email",
+    apply_local_guards: bool = True,
 ) -> StepResult:
     recipient_email = _normalize_email(lead.get("email"))
     if not recipient_email:
         return StepResult(step=step_name, status="skipped", detail="Lead email is not configured")
 
     now = datetime.now(UTC)
-    if _email_already_sent(recipient_email):
+    if apply_local_guards and _email_already_sent(recipient_email):
         detail = "Email already sent to this contact; duplicate outreach prevented"
         _record_email_dispatch(recipient_email=recipient_email, status="skipped_duplicate", detail=detail, lead=lead)
         return StepResult(step=step_name, status="skipped", detail=detail)
 
     sent_today = _emails_sent_today(now)
-    if sent_today >= DAILY_EMAIL_LIMIT:
+    if apply_local_guards and sent_today >= DAILY_EMAIL_LIMIT:
         detail = f"Daily email limit reached ({DAILY_EMAIL_LIMIT})"
         _record_email_dispatch(recipient_email=recipient_email, status="skipped_limit", detail=detail, lead=lead)
         return StepResult(step=step_name, status="skipped", detail=detail)
@@ -447,42 +448,65 @@ def _send_email(lead: dict[str, Any], analysis: dict[str, Any]) -> StepResult:
     return _send_gmail_message(lead=lead, subject=subject, html_body=html_body, step_name="gmail_send_email")
 
 
-def send_prospecting_email(contact: dict[str, Any]) -> StepResult:
+def send_prospecting_email(contact: dict[str, Any], apply_local_guards: bool = True) -> StepResult:
     html_body = render_prospecting_template(contact)
     return _send_gmail_message(
         lead=contact,
         subject=PROSPECT_EMAIL_SUBJECT,
         html_body=html_body,
         step_name="gmail_send_prospecting_email",
+        apply_local_guards=apply_local_guards,
     )
 
 
 def _schedule_follow_up(lead: dict[str, Any], analysis: dict[str, Any]) -> StepResult:
+    if DRY_RUN:
+        return _dry_run_step(step="googlecalendar_create_event", detail="GOOGLECALENDAR_CREATE_EVENT was not executed")
+    if not COMPOSIO_API_KEY:
+        return StepResult(step="googlecalendar_create_event", status="skipped", detail="COMPOSIO_API_KEY is not configured")
+
+    from composio import ComposioToolSet, Action
+
     start = datetime.now(UTC) + timedelta(hours=24)
-    arguments = {
-        "summary": f"Follow-up - {lead.get('first_name', 'Lead')} | {lead.get('interest') or 'Landscape Inquiry'}",
-        "description": json.dumps(
-            {
-                "lead": lead,
-                "analysis": analysis,
-                "checklist": [
-                    "Confirm project scope",
-                    "Confirm timeline and budget",
-                    "Invite to schedule a consultation",
-                ],
-            }
-        ),
-        "start_datetime": start.strftime("%Y-%m-%dT%H:%M:%S"),
-        "event_duration_minutes": 30,
-        "calendar_id": "primary",
-        "timezone": "America/New_York",
-        "send_updates": False,
-    }
-    return _execute_composio_tool(
+    try:
+        ts = ComposioToolSet(api_key=COMPOSIO_API_KEY, entity_id=COMPOSIO_ENTITY_ID)
+        result = ts.execute_action(
+            action=Action.GOOGLECALENDAR_CREATE_EVENT,
+            params={
+                "summary": f"Follow-up - {lead.get('first_name', 'Lead')} | {lead.get('interest') or 'Landscape Inquiry'}",
+                "description": json.dumps(
+                    {
+                        "lead": lead,
+                        "analysis": analysis,
+                        "checklist": [
+                            "Confirm project scope",
+                            "Confirm timeline and budget",
+                            "Invite to schedule a consultation",
+                        ],
+                    }
+                ),
+                "start_datetime": start.strftime("%Y-%m-%dT%H:%M:%S"),
+                "event_duration_minutes": 30,
+                "calendar_id": "primary",
+                "timezone": "America/New_York",
+            },
+            entity_id=COMPOSIO_ENTITY_ID,
+        )
+    except Exception as exc:
+        return StepResult(step="googlecalendar_create_event", status="failed", detail=str(exc))
+
+    if not result.get("successful"):
+        return StepResult(
+            step="googlecalendar_create_event",
+            status="failed",
+            detail=str(result.get("error") or "Composio GCal execution failed"),
+            data=result,
+        )
+    return StepResult(
         step="googlecalendar_create_event",
-        tool_slug="GOOGLECALENDAR_CREATE_EVENT",
-        connected_account_id=COMPOSIO_GCAL_ACCOUNT,
-        arguments=arguments,
+        status="success",
+        detail="GOOGLECALENDAR_CREATE_EVENT executed",
+        data=result.get("data") or result,
     )
 
 

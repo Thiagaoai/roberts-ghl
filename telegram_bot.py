@@ -41,10 +41,12 @@ class TelegramNotifier:
         message = self._build_message(lead, analysis, steps)
 
         try:
-            from telegram import Bot
+            import httpx
 
-            bot = Bot(token=self.token)
-            asyncio.run(bot.send_message(chat_id=self.chat_id, text=message))
+            url = f"https://api.telegram.org/bot{self.token}/sendMessage"
+            with httpx.Client(timeout=15.0) as client:
+                resp = client.post(url, json={"chat_id": self.chat_id, "text": message})
+                resp.raise_for_status()
             return StepResult(step="telegram_notify", status="success", detail="Telegram notification sent")
         except Exception as exc:  # pragma: no cover - external dependency path
             return StepResult(step="telegram_notify", status="failed", detail=str(exc))
