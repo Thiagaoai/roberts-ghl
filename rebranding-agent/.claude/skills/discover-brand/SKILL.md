@@ -156,15 +156,48 @@ _Generated <date> by the `discover-brand` skill_
 _3-5 frases, o norte da rebranding. Tem que ser especifico o suficiente pra dois designers lerem e chegarem no mesmo bairro visual._
 
 ## Pipeline activation
-_Based on the answers, which skills will run:_
+_Based on the answers, which skills will run. Marque [x] pro que roda, [ ] pro que pula. Agrupado por bloco do orchestrator:_
+
+### Bloco A — pesquisa & identidade
 - [x] competitor-research (sempre — alimenta todas as fases seguintes)
-- [x] naming (se renomear = sim)
-- [x] logo-design (se logo = criar novo ou variantes)
-- [x] site-audit + style-extract + apply-rebrand (se URL atual existe)
+- [ ] naming (se renomear = sim)
+- [ ] site-audit + style-extract (se URL atual existe)
+- [x] conversion-angle (se rodando ads, vendendo direto, ou qualquer publico com intent)
 - [x] brand-direction (sempre)
-- [x] social-presence (pros canais ativos + a ativar)
-- [x] conversion-angle (se rodando ads ou objetivo = vender direto)
-- [x] ad-creatives (se rodando ads ou quer comecar)
+- [ ] logo-design (se logo = criar novo ou variantes)
+
+### Bloco B — infraestrutura comercial
+- [x] legal-compliance (sempre — privacy + termos sao baseline)
+- [ ] landing-page (se vende direto OU roda ads OU faz lead-gen)
+- [ ] lead-magnet (se B2B OR high-ticket OR lista de email estrategica)
+- [ ] analytics-setup (se qualquer tipo de ads/trafego pago planejado)
+
+### Bloco C — trafego pago
+- [ ] ad-creatives (se rodando ads Meta ou quer comecar)
+- [ ] ugc-scripts (se Meta ads + publico consumer — UGC ganha em 2026)
+- [ ] google-ads (se intent-based: B2B / high-ticket / servico / nicho com search)
+
+### Bloco D — follow-up
+- [ ] email-sequences (se faz sentido ter funil de email — quase sempre)
+- [ ] whatsapp-flow (se publico BR — quase sempre no BR)
+- [ ] review-setup (se vende — quase sempre)
+
+### Bloco E — distribuicao organica
+- [ ] social-presence (pros canais ativos + a ativar)
+- [ ] content-calendar (se tem canais ativos — depende de social-presence)
+- [ ] seo-content-plan (se nicho tem search volume real — pula se publico so-social)
+- [ ] pr-kit (se quer autoridade/imprensa — opcional mas recomendado em launch)
+
+### Bloco F — consolidacao & lancamento
+- [x] brand-book-pdf (sempre — e o entregavel "oficial")
+- [x] launch-plan (sempre que tiver nova marca/oferta pra anunciar)
+- [ ] apply-rebrand (se repo path existe)
+
+### Flags especiais
+- [ ] NICHO REGULADO: <saude/financeiro/crianca/gambling/adulto — marca qual> → legal-compliance pede review de advogado
+- [ ] REGIAO BR → LGPD + whatsapp-flow + Reclame Aqui em review-setup
+- [ ] REGIAO EU → GDPR + consent mode estrito
+- [ ] PUBLICO PASSIVO (TikTok/IG native) → pula google-ads e seo-content-plan
 ```
 
 ## Quality bar
