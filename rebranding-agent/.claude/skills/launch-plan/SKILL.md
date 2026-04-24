@@ -21,8 +21,8 @@ Rebranding sem lancamento e cair na arvore na floresta — ninguem percebe. Essa
 
 - `./rebrand/01-discovery.md` — timeline desejada, budget, time
 - `./rebrand/05-conversion-angle.md` — hooks, big promise
-- `./rebrand/11-email-sequences.md` — lista atual de email
-- `./rebrand/17-content-calendar.md` — pipeline de conteudo
+- `./rebrand/15-email-sequences.md` — lista atual de email
+- `./rebrand/19-content-calendar.md` — pipeline de conteudo
 
 ## Procedure
 
@@ -195,7 +195,7 @@ Se algo explode:
 
 ### 11. Output umbrella
 
-`./rebrand/18-launch-plan.md`:
+`./rebrand/23-launch-plan.md`:
 
 ```markdown
 # Launch Plan — <marca> — Soft launch 14 dias
@@ -245,4 +245,4 @@ Teaser / Countdown / Launch / Sustain / Optimize
 
 ## Handoff
 
-Retorna path pra `18-launch-plan.md`, lista de assets, timeline completa, e data D=0 recomendada.
+Retorna path pra `23-launch-plan.md`, lista de assets, timeline completa, e data D=0 recomendada.

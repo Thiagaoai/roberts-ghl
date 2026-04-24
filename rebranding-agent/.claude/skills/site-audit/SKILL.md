@@ -80,7 +80,7 @@ For each page, check:
 
 ### 4. Write the audit report
 
-Output: `./rebrand/02-audit.md` with this structure:
+Output: `./rebrand/04-audit.md` with this structure:
 
 ```markdown
 # Site Audit — <url>
@@ -123,6 +123,6 @@ _3–5 bullets the `brand-direction` skill should act on._
 ## Handoff
 
 Return to orchestrator with:
-- Path to `02-audit.md`
+- Path to `04-audit.md`
 - Path to `screenshots/`
 - One-line overall verdict (e.g. "Visually tired but structurally sound — palette and typography are the highest-leverage fixes.")

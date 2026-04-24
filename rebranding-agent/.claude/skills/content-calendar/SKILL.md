@@ -16,7 +16,7 @@ Apos rebranding, o time de social (ou o founder sozinho) precisa postar. Sem cal
 - `./rebrand/01-discovery.md` — canais ativos, horarios, quem cuida
 - `./rebrand/05-conversion-angle.md` — angles, offer stack, prova social
 - `./rebrand/06-direction.md` — voz e tom
-- `./rebrand/08-social-presence.md` — templates ja criados
+- `./rebrand/18-social-presence.md` — templates ja criados
 
 ## Procedure
 
@@ -163,7 +163,7 @@ Gera `./rebrand/content-calendar/_imports/`:
 
 ### 10. Output umbrella
 
-`./rebrand/17-content-calendar.md`:
+`./rebrand/19-content-calendar.md`:
 
 ```markdown
 # Content Calendar — <marca> — 30 dias
@@ -199,7 +199,7 @@ Gera `./rebrand/content-calendar/_imports/`:
 ## Handoff
 
 Retorna:
-- Path pra `17-content-calendar.md`
+- Path pra `19-content-calendar.md`
 - CSVs de import
 - Total de posts por canal
 - Link pro primeiro dia de producao (checklist "faz isso dia X")

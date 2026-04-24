@@ -29,7 +29,7 @@ Se discovery indicar publico "passive" (TikTok/IG native, impulse buyer, nao pro
 - `./rebrand/01-discovery.md` — publico, ticket, regiao
 - `./rebrand/02-competitor-research.md` — concorrentes (pra analisar Ads deles via SEMrush/Spyfu lookup)
 - `./rebrand/05-conversion-angle.md` — big promise, CTAs
-- `./rebrand/13-landing-page.md` — LP URL (melhor que homepage pra ads)
+- `./rebrand/09-landing-page.md` — LP URL (melhor que homepage pra ads)
 
 ## Procedure
 
@@ -209,7 +209,7 @@ Por tamanho de operacao:
 
 ### 11. Output umbrella
 
-`./rebrand/19-google-ads.md`:
+`./rebrand/14-google-ads.md`:
 
 ```markdown
 # Google Ads Setup — <marca>
@@ -268,4 +268,4 @@ R$ <X>/mes distribuido como:
 
 ## Handoff
 
-Retorna path pra `19-google-ads.md`, CSVs de import, keyword research, e checklist de conversion actions a configurar no GA4 antes de ativar.
+Retorna path pra `14-google-ads.md`, CSVs de import, keyword research, e checklist de conversion actions a configurar no GA4 antes de ativar.

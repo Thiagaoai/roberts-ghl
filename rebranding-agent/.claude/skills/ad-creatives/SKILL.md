@@ -24,8 +24,8 @@ Se for so Google Ads ou so TikTok, a skill avisa e sugere uma variacao (por enqu
 
 ## Input
 
-- `./rebrand/06-conversion-angle.md` (do conversion-angle) — angle principal + 2-3 angles secundarios
-- `./rebrand/.selected-name.json` + `03-direction.md` — nome, tagline, palette, tipografia
+- `./rebrand/05-conversion-angle.md` (do conversion-angle) — angle principal + 2-3 angles secundarios
+- `./rebrand/.selected-name.json` + `06-direction.md` — nome, tagline, palette, tipografia
 - `./rebrand/logo/final/` — logo exports
 - Prova social do discovery (depoimentos, numeros, cases)
 
@@ -181,7 +181,7 @@ Rebrand-2026-04,Hook1-Broad,Creative-01,...,...,...,https://...,Learn More,file:
 
 ### 7. Output final
 
-`./rebrand/07-ad-creatives.md`:
+`./rebrand/12-ad-creatives.md`:
 
 ```markdown
 # Ad creatives Meta — <nome>
@@ -220,4 +220,4 @@ Volte rodar essa skill com o criativo winner do teste na input pra gerar "variac
 
 ## Handoff
 
-Retorna path pra `07-ad-creatives.md`, contagem de creatives gerados, e flags se algum check falhou (ex: "sem prova social disponivel no discovery — criei mocks com placeholder, usuario precisa substituir antes de subir").
+Retorna path pra `12-ad-creatives.md`, contagem de creatives gerados, e flags se algum check falhou (ex: "sem prova social disponivel no discovery — criei mocks com placeholder, usuario precisa substituir antes de subir").

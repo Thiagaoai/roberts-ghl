@@ -15,7 +15,7 @@ Quando o site ganha rebranding e o Instagram ainda ta com a logo antiga e bio de
 
 - `./rebrand/01-discovery.md` — canais ativos + handles + canais a ativar
 - `./rebrand/.selected-name.json` — nome + taglines
-- `./rebrand/03-direction.md` + tokens da direcao escolhida
+- `./rebrand/06-direction.md` + tokens da direcao escolhida
 - `./rebrand/logo/final/` — assets do logo
 
 ## Procedure
@@ -152,7 +152,7 @@ Os templates usam **tokens CSS vars** da direcao escolhida, entao qualquer ajust
 
 ### 6. Output final
 
-`./rebrand/05-social-presence.md`:
+`./rebrand/18-social-presence.md`:
 
 ```markdown
 # Presenca online — <nome>
@@ -199,4 +199,4 @@ _Generated <date> by the `social-presence` skill_
 
 ## Handoff
 
-Retorna path pra `05-social-presence.md` e um checklist consolidado de "o que voce precisa atualizar manualmente".
+Retorna path pra `18-social-presence.md` e um checklist consolidado de "o que voce precisa atualizar manualmente".

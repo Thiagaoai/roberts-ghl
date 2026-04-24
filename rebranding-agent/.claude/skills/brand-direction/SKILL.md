@@ -9,7 +9,7 @@ description: Phase 3 of the rebranding pipeline. Synthesizes the discovery brief
 
 ## Purpose
 
-Turn `01-discovery.md` + `02-audit.md` + `02-current-tokens.json` into 2–3 **named, opinionated** new brand directions the user can pick between. Each direction is a full, coherent system — not a mood board of vibes.
+Turn `01-discovery.md` + `04-audit.md` + `04-current-tokens.json` into 2–3 **named, opinionated** new brand directions the user can pick between. Each direction is a full, coherent system — not a mood board of vibes.
 
 ## Hard rule
 
@@ -18,8 +18,8 @@ This is a **checkpoint skill**. You MUST end by calling `AskUserQuestion` asking
 ## Inputs
 
 - `./rebrand/01-discovery.md`
-- `./rebrand/02-audit.md`
-- `./rebrand/02-current-tokens.json`
+- `./rebrand/04-audit.md`
+- `./rebrand/04-current-tokens.json`
 - Optional competitor screenshots (already in `./rebrand/screenshots/competitors/` if provided in Phase 1)
 
 ## Procedure
@@ -92,7 +92,7 @@ Keep mockups honest — use real-looking content from the discovery brief, not "
 
 ### 4. Write the direction doc
 
-Output: `./rebrand/03-direction.md`
+Output: `./rebrand/06-direction.md`
 
 ```markdown
 # Brand directions — <company>
@@ -124,7 +124,7 @@ Each direction ships with: a named point of view, a full token set, voice princi
 …
 ```
 
-And emit a machine-readable version: `./rebrand/03-new-tokens.<slug>.json` per direction, in the same shape as `02-current-tokens.json`. Phase 5 will consume whichever one the user picks.
+And emit a machine-readable version: `./rebrand/03-new-tokens.<slug>.json` per direction, in the same shape as `04-current-tokens.json`. Phase 5 will consume whichever one the user picks.
 
 ### 5. Checkpoint — wait for approval
 
@@ -147,6 +147,6 @@ If the user picks "None" → ask a follow-up (what to change), regenerate affect
 ## Handoff
 
 Return:
-- Path to `03-direction.md`
+- Path to `06-direction.md`
 - The user's selected slug
 - One-sentence rationale the orchestrator can echo to the user ("You chose *Quiet Authority* — proceeding to generate assets and apply code changes.")

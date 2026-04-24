@@ -268,7 +268,7 @@ No form de signup:
 
 ### 10. Output umbrella
 
-`./rebrand/15-legal-compliance.md`:
+`./rebrand/08-legal-compliance.md`:
 
 ```markdown
 # Legal Compliance — <marca>
@@ -304,4 +304,4 @@ No form de signup:
 
 ## Handoff
 
-Retorna path pra `15-legal-compliance.md`, lista de avisos, e se nicho regulado foi detectado (pra orchestrator reforcar).
+Retorna path pra `08-legal-compliance.md`, lista de avisos, e se nicho regulado foi detectado (pra orchestrator reforcar).

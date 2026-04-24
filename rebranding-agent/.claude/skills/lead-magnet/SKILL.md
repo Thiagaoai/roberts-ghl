@@ -229,7 +229,7 @@ Rodando em paralelo, valida qual converte mais visitante em lead.
 
 ### 10. Output umbrella
 
-`./rebrand/22-lead-magnet.md`:
+`./rebrand/10-lead-magnet.md`:
 
 ```markdown
 # Lead Magnet — <marca>
@@ -279,4 +279,4 @@ Rodando em paralelo, valida qual converte mais visitante em lead.
 
 ## Handoff
 
-Retorna path pra `22-lead-magnet.md`, PDF gerado, LP preview, lista de emails de nurture, e KPIs alvo.
+Retorna path pra `10-lead-magnet.md`, PDF gerado, LP preview, lista de emails de nurture, e KPIs alvo.

@@ -99,7 +99,7 @@ Em paralelo (1 job por concorrente; use `Bash` + Playwright script):
 │   │   ├── home-mobile.png
 │   │   ├── pricing-desktop.png
 │   │   └── about-desktop.png
-│   ├── tokens.json                  # mesma estrutura do 02-current-tokens.json
+│   ├── tokens.json                  # mesma estrutura do 04-current-tokens.json
 │   ├── meta-ads/
 │   │   ├── ad-01.png
 │   │   ├── ad-01.txt                # hook + body + cta

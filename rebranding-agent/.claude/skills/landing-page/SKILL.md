@@ -167,7 +167,7 @@ Validacao: roda Lighthouse apos build, falha se performance < 90.
 
 ### 9. Output umbrella
 
-`./rebrand/13-landing-page.md`:
+`./rebrand/09-landing-page.md`:
 
 ```markdown
 # Landing Page — <oferta>
@@ -214,7 +214,7 @@ Validacao: roda Lighthouse apos build, falha se performance < 90.
 ## Handoff
 
 Retorna:
-- Path pra `13-landing-page.md` + codigo gerado
+- Path pra `09-landing-page.md` + codigo gerado
 - Link pra preview local (se Next.js/Astro: `npm run dev`)
 - Score de Lighthouse pos-build
 - Lista de env vars que precisam ser setadas

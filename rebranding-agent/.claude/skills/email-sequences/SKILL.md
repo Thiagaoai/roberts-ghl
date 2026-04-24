@@ -168,7 +168,7 @@ Cada um com os triggers, delays, e conteudos ja mapeados.
 
 ### 8. Output umbrella
 
-`./rebrand/11-email-sequences.md`:
+`./rebrand/15-email-sequences.md`:
 
 ```markdown
 # Email sequences — <marca>
@@ -211,4 +211,4 @@ Escolha seu provider e siga o import:
 
 ## Handoff
 
-Retorna path pra `11-email-sequences.md`, contagem de emails, e lista de providers com import-file pronto.
+Retorna path pra `15-email-sequences.md`, contagem de emails, e lista de providers com import-file pronto.

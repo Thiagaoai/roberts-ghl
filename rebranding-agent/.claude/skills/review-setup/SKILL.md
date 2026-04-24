@@ -26,8 +26,8 @@ Essa skill entrega:
 ## Input
 
 - `./rebrand/01-discovery.md` — categoria, regiao, modelo
-- `./rebrand/11-email-sequences.md` — ja tem email 14 no post-purchase ("Review request")
-- `./rebrand/13-landing-page.md` — pra embed de widget
+- `./rebrand/15-email-sequences.md` — ja tem email 14 no post-purchase ("Review request")
+- `./rebrand/09-landing-page.md` — pra embed de widget
 
 ## Procedure
 
@@ -229,7 +229,7 @@ Setup de monitoring:
 
 ### 8. Output umbrella
 
-`./rebrand/21-review-setup.md`:
+`./rebrand/17-review-setup.md`:
 
 ```markdown
 # Review Setup — <marca>
@@ -288,4 +288,4 @@ Embed no site em <onde na LP>:
 
 ## Handoff
 
-Retorna path pra `21-review-setup.md`, lista de links de cada plataforma, templates, e checklist de ativacao semanal.
+Retorna path pra `17-review-setup.md`, lista de links de cada plataforma, templates, e checklist de ativacao semanal.

@@ -14,10 +14,10 @@ Pegar todo output das skills anteriores e aplicar no codigo real, produzindo um 
 ## Input
 
 - `./rebrand/01-discovery.md` — pra confirmar repo path e nao-negociaveis
-- `./rebrand/03-direction.md` + `.selected-direction` + `03-new-tokens.<slug>.json` — tokens da direcao escolhida
-- `./rebrand/04-logo.md` + `./rebrand/logo/final/` — favicon, og-image, avatar
-- `./rebrand/06-conversion-angle.md` — headlines, CTAs, copy
-- (Opcional) `./rebrand/02-audit.md` — corrige P0s de acessibilidade/SEO no processo
+- `./rebrand/06-direction.md` + `.selected-direction` + `03-new-tokens.<slug>.json` — tokens da direcao escolhida
+- `./rebrand/07-logo.md` + `./rebrand/logo/final/` — favicon, og-image, avatar
+- `./rebrand/05-conversion-angle.md` — headlines, CTAs, copy
+- (Opcional) `./rebrand/04-audit.md` — corrige P0s de acessibilidade/SEO no processo
 
 ## Pre-conditions
 
@@ -77,7 +77,7 @@ git checkout -b rebrand/<YYYY-MM-DD>-<name-slug>
 theme: {
   extend: {
     colors: {
-      brand: { DEFAULT: '#0A2540', ... }, // de 03-new-tokens.json
+      brand: { DEFAULT: '#0A2540', ... }, // de 06-new-tokens.json
       accent: { DEFAULT: '#00D4FF', ... },
       // ...
     },
@@ -131,7 +131,7 @@ Substitui qualquer hex hardcoded restante com um `Grep` por `#[0-9a-fA-F]{6}` e 
 
 ### 5. Troca as headlines
 
-Do `06-conversion-angle.md`:
+Do `05-conversion-angle.md`:
 - H1 home → substitui no componente `Hero`/`Home` (detecta via `Grep` pelo texto antigo, confirma com usuario se houver multipla ocorrencia).
 - Sub-H1, CTA primario/secundario → substitui idem.
 - Headlines de `/pricing`, `/about` → se existir.
@@ -140,7 +140,7 @@ Do `06-conversion-angle.md`:
 
 ### 6. Corrige os P0s do audit
 
-Da secao "P0 — Blockers" do `02-audit.md`:
+Da secao "P0 — Blockers" do `04-audit.md`:
 
 - **Contraste WCAG** — se um par de cores falhou, os novos tokens ja consertam.
 - **Heading hierarchy** — troca `<h3>` mal-usado pra `<h2>` etc.
@@ -161,7 +161,7 @@ Se `01-discovery.md` indica ads ativos ou planejados:
 Invoca `site-audit` de novo, agora apontando pra `http://localhost:<dev-port>` (depois de `npm run dev` ou equivalente) ou pra build local:
 
 - Gera `./rebrand/08-after-screenshots/` espelhando a estrutura do `screenshots/` da Fase 2.
-- Monta `./rebrand/08-before-after.md` lado a lado:
+- Monta `./rebrand/24-before-after.md` lado a lado:
 
 ```markdown
 # Before / After
@@ -181,7 +181,7 @@ Chama `AskUserQuestion`:
 
 - Mostra:
   - Resumo do diff (`git diff --stat`)
-  - Link pro `08-before-after.md`
+  - Link pro `24-before-after.md`
   - Lista de arquivos mudados
 - Opcoes: "Abrir PR", "Deixa eu revisar e ajustar antes", "Reverter tudo"
 
@@ -207,14 +207,14 @@ git push -u origin rebrand/<YYYY-MM-DD>-<name-slug>
 Pra abrir o PR: detecta se repo tem `origin` no GitHub. Se sim e o ambiente tiver `gh` CLI, cria o PR:
 
 ```bash
-gh pr create --title "Rebrand: <name>" --body-file ./rebrand/08-before-after.md
+gh pr create --title "Rebrand: <name>" --body-file ./rebrand/24-before-after.md
 ```
 
 Se nao tem `gh` CLI (este agente nao tem por padrao no web mode) ou o repo esta em outro host: imprime o link pra criar o PR manualmente + o body sugerido.
 
 ### 11. Output final
 
-`./rebrand/09-apply-report.md`:
+`./rebrand/24-apply-report.md`:
 
 ```markdown
 # Apply report — <name>
@@ -263,6 +263,6 @@ https://github.com/<owner>/<repo>/pull/<N>
 
 Esta e a ultima fase. Retorna:
 - Link do PR (ou instrucoes pra abrir manual)
-- Path pra `09-apply-report.md`
+- Path pra `24-apply-report.md`
 - Status de build (pass/fail)
 - Um checklist final pro usuario executar (deploy, atualizar DNS pro novo dominio, trocar avatares nas redes, subir os ads).

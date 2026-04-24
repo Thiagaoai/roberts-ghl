@@ -133,7 +133,7 @@ Se o discovery ja deixou claro o angle (ex: `Unfair advantage = "so nos fazemos 
 
 ### 6. Output final
 
-`./rebrand/06-conversion-angle.md`:
+`./rebrand/05-conversion-angle.md`:
 
 ```markdown
 # Conversion angle — <nome>
@@ -194,7 +194,7 @@ _Generated <date> by the `conversion-angle` skill_
 ## Handoff
 
 Retorna:
-- Path pra `06-conversion-angle.md`
+- Path pra `05-conversion-angle.md`
 - Angle escolhido
 - Os 3 hooks e big promise (pros outros skills consumirem)
 - Red flags (ex: "sem prova social", "sophistication do nicho exige stage 5 mas discovery aponta stage 3")

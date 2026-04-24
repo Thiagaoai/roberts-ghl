@@ -123,7 +123,7 @@ Se escolher um:
 
 ### 6. Output final
 
-`./rebrand/04-logo.md`:
+`./rebrand/07-logo.md`:
 
 ```markdown
 # Logo final — <nome>
@@ -165,4 +165,4 @@ Esses assets alimentam:
 
 ## Handoff
 
-Retorna path pra `04-logo.md`, caminho do diretorio `final/`, e flag indicando se favicon.ico foi gerado (requer ImageMagick) ou se precisa que o usuario faca a conversao.
+Retorna path pra `07-logo.md`, caminho do diretorio `final/`, e flag indicando se favicon.ico foi gerado (requer ImageMagick) ou se precisa que o usuario faca a conversao.

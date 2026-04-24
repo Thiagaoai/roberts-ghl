@@ -27,7 +27,7 @@ PR feito bem amplifica launch sem custo de midia paga — e da credibilidade (so
 - `./rebrand/06-direction.md` — tom de voz
 - `./rebrand/07-logo.md` + `./rebrand/logo/final/` — logos
 - `./rebrand/mockups/` — mockups em alta
-- `./rebrand/18-launch-plan.md` — data D=0
+- `./rebrand/23-launch-plan.md` — data D=0
 
 ## Procedure
 
@@ -289,7 +289,7 @@ Gera `./rebrand/press-kit/site/index.html` — pagina publica, deployable em `im
 
 ### 10. Output umbrella
 
-`./rebrand/20-pr-kit.md`:
+`./rebrand/21-pr-kit.md`:
 
 ```markdown
 # PR Kit — <marca>
@@ -355,4 +355,4 @@ Gera `./rebrand/press-kit/site/index.html` — pagina publica, deployable em `im
 
 ## Handoff
 
-Retorna path pra `20-pr-kit.md`, site press-kit preview, media list CSV, e timeline sugerida de outreach.
+Retorna path pra `21-pr-kit.md`, site press-kit preview, media list CSV, e timeline sugerida de outreach.

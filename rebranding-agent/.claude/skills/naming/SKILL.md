@@ -105,7 +105,7 @@ Ambas <= 8 palavras.
 
 ### 6. Escreve o output
 
-Write `./rebrand/02-naming.md`:
+Write `./rebrand/03-naming.md`:
 
 ```markdown
 # Nomes propostos — <empresa>
@@ -171,7 +171,7 @@ Se escolher "Nenhum" → pergunta o que mudar (estilo / idioma / tom) e regera.
 ## Handoff
 
 Retorna:
-- Path pra `02-naming.md`
+- Path pra `03-naming.md`
 - Nome selecionado + tagline
 - Dominio e handle recomendados
 - Bandeiras vermelhas (trademark conflict, dominio pego, etc.)

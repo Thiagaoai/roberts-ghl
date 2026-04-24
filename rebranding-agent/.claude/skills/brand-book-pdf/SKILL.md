@@ -244,7 +244,7 @@ Designer importa no Figma, estilos aparecem como vars.
 
 ### 9. Output umbrella
 
-`./rebrand/16-brand-book.md`:
+`./rebrand/22-brand-book.md`:
 
 ```markdown
 # Brand Book — <marca> v1.0
@@ -285,4 +285,4 @@ Designer importa no Figma, estilos aparecem como vars.
 
 ## Handoff
 
-Retorna path pra `16-brand-book.md`, PDF gerado, link pro site preview local, Figma JSON.
+Retorna path pra `22-brand-book.md`, PDF gerado, link pro site preview local, Figma JSON.

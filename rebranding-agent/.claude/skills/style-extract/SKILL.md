@@ -63,7 +63,7 @@ Aggregate across pages and cluster:
 
 ### 3. Write the tokens file
 
-Output: `./rebrand/02-current-tokens.json`
+Output: `./rebrand/04-current-tokens.json`
 
 ```json
 {
@@ -103,7 +103,7 @@ Output: `./rebrand/02-current-tokens.json`
 
 ### 4. Write a short readable companion
 
-Also emit `./rebrand/02-current-tokens.md` — a human-readable view of the same data with color swatches (use `![swatch](https://via.placeholder.com/40/<hex>/<hex>.png)` or similar) and a one-paragraph summary: "The current system uses 14 distinct colors (target: 6–8), a single font family, and an inconsistent spacing scale."
+Also emit `./rebrand/04-current-tokens.md` — a human-readable view of the same data with color swatches (use `![swatch](https://via.placeholder.com/40/<hex>/<hex>.png)` or similar) and a one-paragraph summary: "The current system uses 14 distinct colors (target: 6–8), a single font family, and an inconsistent spacing scale."
 
 ## Quality bar
 
@@ -113,4 +113,4 @@ Also emit `./rebrand/02-current-tokens.md` — a human-readable view of the same
 
 ## Handoff
 
-Return the path to `02-current-tokens.json`, the one-paragraph summary, and the count of color/size/spacing outliers (a quick health metric the user will want).
+Return the path to `04-current-tokens.json`, the one-paragraph summary, and the count of color/size/spacing outliers (a quick health metric the user will want).

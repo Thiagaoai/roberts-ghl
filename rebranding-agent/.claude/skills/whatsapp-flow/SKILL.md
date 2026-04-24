@@ -25,7 +25,7 @@ Se discovery disse que publico nao e BR e nao usa WhatsApp, pula com um no-op + 
 
 - `./rebrand/01-discovery.md` — oferta, ticket, objecoes comuns, horario de atendimento
 - `./rebrand/05-conversion-angle.md` — big promise, offer stack, prova social
-- `./rebrand/11-email-sequences.md` (se ja existir) — pra alinhar copy
+- `./rebrand/15-email-sequences.md` (se ja existir) — pra alinhar copy
 
 ## Procedure
 
@@ -198,7 +198,7 @@ Quando a conversa escala pra humano, o atendente precisa de scripts:
 
 ### 7. Output umbrella
 
-`./rebrand/12-whatsapp-flow.md`:
+`./rebrand/16-whatsapp-flow.md`:
 
 ```markdown
 # WhatsApp Flow — <marca>
@@ -238,4 +238,4 @@ Quando a conversa escala pra humano, o atendente precisa de scripts:
 
 ## Handoff
 
-Retorna path pra `12-whatsapp-flow.md`, lista de providers, e checklist de setup (numero, verificacao, templates pra review).
+Retorna path pra `16-whatsapp-flow.md`, lista de providers, e checklist de setup (numero, verificacao, templates pra review).

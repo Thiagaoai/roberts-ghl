@@ -27,7 +27,7 @@ Se discovery indicar produto com busca zero (ex: "sistema proprietario de nome u
 - `./rebrand/01-discovery.md` — categoria, publico, concorrentes
 - `./rebrand/02-competitor-research.md` — concorrentes SEO (quem ranqueia)
 - `./rebrand/05-conversion-angle.md` — topicos do produto
-- `./rebrand/13-landing-page.md` — LP que precisa ranquear
+- `./rebrand/09-landing-page.md` — LP que precisa ranquear
 - Site atual (pra auditoria tecnica)
 
 ## Procedure
@@ -239,7 +239,7 @@ Dashboard Looker Studio: trafego organico, impressoes vs clicks, CTR por pagina,
 
 ### 10. Output umbrella
 
-`./rebrand/23-seo-content-plan.md`:
+`./rebrand/20-seo-content-plan.md`:
 
 ```markdown
 # SEO + Content Plan — <marca>
@@ -309,4 +309,4 @@ Dashboard Looker Studio: trafego organico, impressoes vs clicks, CTR por pagina,
 
 ## Handoff
 
-Retorna path pra `23-seo-content-plan.md`, keyword research CSV, 6-month calendar, briefings de 3 primeiros posts.
+Retorna path pra `20-seo-content-plan.md`, keyword research CSV, 6-month calendar, briefings de 3 primeiros posts.

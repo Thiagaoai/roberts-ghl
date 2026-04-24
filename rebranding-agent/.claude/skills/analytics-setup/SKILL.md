@@ -26,7 +26,7 @@ Essa skill entrega:
 ## Input
 
 - `./rebrand/01-discovery.md` — modelo de receita, regiao (BR → LGPD, EU → GDPR)
-- `./rebrand/13-landing-page.md` (se existir) — pagina que precisa de tracking
+- `./rebrand/09-landing-page.md` (se existir) — pagina que precisa de tracking
 - Repo do site
 
 ## Procedure
@@ -227,7 +227,7 @@ Alternativa: script Python que cria os dashboards via Looker Studio API (se user
 
 ### 8. Output umbrella
 
-`./rebrand/14-analytics-setup.md`:
+`./rebrand/11-analytics-setup.md`:
 
 ```markdown
 # Analytics Setup — <marca>
@@ -284,4 +284,4 @@ Abrir `./rebrand/analytics/utm-builder.html` e bookmarkar pra criar links consis
 
 ## Handoff
 
-Retorna path pra `14-analytics-setup.md`, lista de env vars criadas, links dos dashboards, e checklist pre-launch.
+Retorna path pra `11-analytics-setup.md`, lista de env vars criadas, links dos dashboards, e checklist pre-launch.
